@@ -60,16 +60,24 @@
   }
 
   void loop() {
-
-    int val[4];
     
-    for (int i=0; i<4; i++) {
+    int duration = 1;
+
+    int fs = 1;
+
+    // Number of samples to collect
+    int nSamp = fs*duration;
+
+    int val[nSamp];
+    
+    for (int i=0; i<nSamp; i++) {
       val[i] = analogRead(0);
-      delay(1000);
+      Serial.println(String(val[i])+"  "+String(i));
+      delay(1000/fs);
     }
 
     String height;
-    for (int i=0; i<4; i++) {
+    for (int i=0; i<nSamp; i++) {
       height+=String(val[i])+",";
     }
     
