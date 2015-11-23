@@ -18,10 +18,10 @@ const int pin_rx = 8;
 SoftwareSerial gprs(pin_tx,pin_rx);//TX,RX
 
 void setup(){
-//  Serial.begin(9600);
-//  sim900_init(&gprs, -1, 9600);
-  Serial.begin(19200);
-  sim900_init(&gprs, -1, 19200);
+  Serial.begin(9600);
+  sim900_init(&gprs, -1, 9600);
+//  Serial.begin(19200);
+//  sim900_init(&gprs, -1, 19200);
 }
 
 void loop(){
