@@ -4,6 +4,6 @@ void setup() {
 
 void loop() {
   int data = analogRead(0);
-  Serial.println(String(data));
+  Serial.println("#S|BAYLANDS|["+String(data)+"]#");
   delay(50);
 }
